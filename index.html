@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Teste de Orientação da Vida (LOT-R/TOV-R) - Avalie seu otimismo disposicional">
+    <title>Teste de Orientação da Vida (LOT-R/TOV-R)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Teste de Orientação da Vida</h1>
+            <h2>Life Orientation Test - Revised (LOT-R/TOV-R)</h2>
+            <p class="subtitle">Avalie seu otimismo disposicional</p>
+        </header>
+
+        <main>
+            <!-- Tela Inicial -->
+            <section id="intro-screen" class="screen active">
+                <div class="info-card">
+                    <h3>Sobre o Teste</h3>
+                    <p>O <strong>Teste de Orientação da Vida - Versão Revisada (TOV-R)</strong> foi desenvolvido por Scheier e Carver (1994) para avaliar o otimismo disposicional, ou seja, a tendência geral de esperar resultados positivos no futuro.</p>
+                    
+                    <h4>Como funciona:</h4>
+                    <ul>
+                        <li>10 questões no total</li>
+                        <li>Escala de 0 a 4 pontos</li>
+                        <li>Pontuação total: 0 a 24 pontos</li>
+                        <li>Tempo estimado: 3-5 minutos</li>
+                    </ul>
+
+                    <div class="alert">
+                        <strong>Importante:</strong> Este teste tem fins educacionais e de autoconhecimento. Não substitui avaliação psicológica profissional.
+                    </div>
+
+                    <button id="start-btn" class="btn-primary">Iniciar Teste</button>
+                </div>
+            </section>
+
+            <!-- Tela do Questionário -->
+            <section id="questionnaire-screen" class="screen">
+                <div class="progress-bar">
+                    <div id="progress" class="progress"></div>
+                </div>
+                <p class="question-counter">Questão <span id="current-q">1</span> de 10</p>
+                
+                <div id="question-container" class="question-card">
+                    <!-- Questões serão inseridas via JavaScript -->
+                </div>
+
+                <div class="navigation">
+                    <button id="prev-btn" class="btn-secondary" disabled>Anterior</button>
+                    <button id="next-btn" class="btn-primary">Próxima</button>
+                </div>
+            </section>
+
+            <!-- Tela de Resultados -->
+            <section id="results-screen" class="screen">
+                <div class="results-card">
+                    <h3>Seu Resultado</h3>
+                    
+                    <div class="score-display">
+                        <div class="score-circle">
+                            <span id="final-score">0</span>
+                            <span class="score-max">/ 24</span>
+                        </div>
+                        <p id="score-category" class="category"></p>
+                    </div>
+
+                    <div id="interpretation" class="interpretation">
+                        <!-- Interpretação será inserida via JavaScript -->
+                    </div>
+
+                    <div class="score-breakdown">
+                        <h4>Detalhamento:</h4>
+                        <ul>
+                            <li>Itens positivos (1, 4, 10): <span id="positive-score">0</span></li>
+                            <li>Itens negativos invertidos (3, 7, 9): <span id="negative-score">0</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="actions">
+                        <button id="retake-btn" class="btn-primary">Refazer Teste</button>
+                        <button id="share-btn" class="btn-secondary">Compartilhar Resultado</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Baseado em: Scheier, M. F.; Carver, C. S. (1994)</p>
+            <p>Validação Brasileira: Giacomoni & Hutz (2008)</p>
+            <p class="disclaimer">Este é um instrumento educacional. Para avaliação psicológica, consulte um profissional.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
